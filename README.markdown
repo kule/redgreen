@@ -10,6 +10,10 @@ This version works using ZenTest 4.0.0 on XP & Vista.
 
     gem install kule-redgreen -s http://gems.github.com
 
+NB. Don't forget to uninstall the old redgreen gem if you are using it:
+
+    gem uninstall redgreen
+
 ## Autotest & Snarl Setup
 
 See here to set up your windows environment:
