@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{kule-redgreen}
+  s.name = %q{redgreen}
   s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
@@ -18,9 +18,9 @@ Gem::Specification.new do |s|
     "README.markdown",
     "Rakefile",
     "bin/rg",
-    "kule-redgreen.gemspec",
     "lib/redgreen.rb",
     "lib/redgreen/autotest.rb",
+    "redgreen.gemspec",
     "version.yml"
   ]
   s.has_rdoc = true
