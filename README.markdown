@@ -23,7 +23,8 @@ In your `.autotest` file you just need the following (used for tests/shoulda):
 
 ## Snarl Issue (Tests always Pass)
 
-Currently to allow Snarl to work with ZenTest 4.0.0 you need to modify autotest.rb file (Usually: C:\Ruby\lib\ruby\gems\1.8\gems\ZenTest-4.0.0\lib\):
+Currently to allow Snarl to work with ZenTest 4.0.0 you need to modify autotest.rb file  
+(Usually: `C:\Ruby\lib\ruby\gems\1.8\gems\ZenTest-4.0.0\lib\`):
 
 Change this line:
     self.failed_results_re = /^\s+\d+\) (?:Failure|Error):\n(.*?)\((.*?)\)/
@@ -31,9 +32,9 @@ Change this line:
 To:
     self.failed_results_re = /^\s+\d+\) (?:\e\[\d+m)?(?:Failure|Error)(?:\e\[0m)?:\n(.*?)\((.*?)\)/
 
-I'll pop an email over to the ZenTest guys to see if they are okay to make this change.
-
 This then allows the regular expression to ignore the colour escape codes and it picks up the correct amount of failures.
+
+FYI I'll pop an email over to the ZenTest guys to see if they are okay to make this change.
 
 ## Other Minor Changes
 
