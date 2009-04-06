@@ -45,7 +45,7 @@ FYI I'll pop an email over to the ZenTest guys to see if they are okay to make t
 Changed the colour scheme from foreground to background colours as I find it a little easier on the eyes!
 
 Luke Pearce  
-www.kulesolutions.com
+[http://www.kulesolutions.com](http://www.kulesolutions.com)
 
 ### Previous README comments:
 
