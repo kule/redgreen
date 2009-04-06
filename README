@@ -2,7 +2,9 @@
 
 redgreen is a fork of Pat Eyler's & Chris Wanstrath's RedGreen.
 
-I had problems getting the old version working with autotest using ZenTest 4.0.0 on Vista. NB It should work on XP although I haven't tested it.
+I had problems with autotest just running once then stopping rather than continuously testing.
+
+This version works using ZenTest 4.0.0 on Vista. It should work on XP although I haven't tested it.
 
 Autotest & Snarl Setup
 ---------------
