@@ -1,0 +1,25 @@
+require 'rake'
+
+$LOAD_PATH.unshift('lib')
+ 
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    gem.name = "kule-redgreen"
+    gem.summary = "kule-redgreen colourises windows console output for tests."
+    gem.email = "github@kulesolutions.com"
+    gem.homepage = "http://github.com/kule/redgreen"
+    gem.description = "kule-redgreen colourises windows console output for tests.  This version works with ZenTest 4.0.0, autotest, snarl, XP and Vista.  Please see the README file for setup or issues with Snarl."
+    gem.authors = ["Pat Eyler", "Chris Wanstrath", "Luke Pearce"]
+  end
+rescue LoadError
+  puts "Jeweler, or one of its dependencies, is not available. Install it with: gem install jeweler"
+end
+ 
+require 'rake/rdoctask'
+Rake::RDocTask.new do |rdoc|
+  rdoc.rdoc_dir = 'rdoc'
+  rdoc.title = 'kule-redgreen'
+  rdoc.rdoc_files.include('README.markdown')
+  rdoc.rdoc_files.include('lib/**/*.rb')
+end
