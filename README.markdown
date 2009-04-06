@@ -13,7 +13,7 @@ This version works using ZenTest 4.0.0 on XP & Vista.
 ## Autotest & Snarl Setup
 
 See here to set up your windows environment:
-http://thewebfellas.com/blog/2007/12/10/rspec-autotest-and-snarl-on-windows
+[http://thewebfellas.com/blog/2007/12/10/rspec-autotest-and-snarl-on-windows](http://thewebfellas.com/blog/2007/12/10/rspec-autotest-and-snarl-on-windows)
 
 In your `.autotest` file you just need the following (used for tests/shoulda):
 
@@ -50,13 +50,13 @@ Use it as you would the ruby interpreter when running your unit test.
 
 Like so:
 
-$ rg test/test_units.rb
+    rg test/test_units.rb
 
 Relevant bloggings:
-- http://errtheblog.com/post/15
-- http://on-ruby.blogspot.com/2006/05/red-and-green-for-ruby.html
+
+* [http://errtheblog.com/post/15](http://errtheblog.com/post/15)
+* [http://on-ruby.blogspot.com/2006/05/red-and-green-for-ruby.html](http://on-ruby.blogspot.com/2006/05/red-and-green-for-ruby.html)
 
 Enjoy.
 
->> Chris Wanstrath
-=> chris[at]ozmm[dot]org
+Chris Wanstrath
