@@ -5,7 +5,7 @@ $LOAD_PATH.unshift('lib')
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "kule-redgreen"
+    gem.name = "redgreen"
     gem.summary = "kule-redgreen colourises windows console output for tests."
     gem.email = "github@kulesolutions.com"
     gem.homepage = "http://github.com/kule/redgreen"

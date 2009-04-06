@@ -24,7 +24,7 @@ In your `.autotest` file you just need the following (used for tests/shoulda):
 ## Snarl Issue (Tests always Pass)
 
 Currently to allow Snarl to work with ZenTest 4.0.0 you need to modify autotest.rb file  
-(Usually: `C:\Ruby\lib\ruby\gems\1.8\gems\ZenTest-4.0.0\lib\`):
+(Usually: `C:\Ruby\lib\ruby\gems\1.8\gems\ZenTest-4.0.0\lib\` ):
 
 Change this line:
     self.failed_results_re = /^\s+\d+\) (?:Failure|Error):\n(.*?)\((.*?)\)/
