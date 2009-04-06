@@ -39,12 +39,10 @@ This then allows the regular expression to ignore the colour escape codes and it
 
 Changed the colour scheme from foreground to background colours as I find it a little easier on the eyes!
 
-Luke Pearce
+Luke Pearce  
 www.kulesolutions.com
 
-***
-
-## Previous README comments:
+### Previous README comments:
 
 Use it as you would the ruby interpreter when running your unit test.
 
@@ -59,4 +57,3 @@ Relevant bloggings:
 
 Enjoy.
 
-Chris Wanstrath
