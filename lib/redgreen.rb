@@ -2,13 +2,15 @@ require 'test/unit'
 require 'test/unit/ui/console/testrunner'
 
 # cute.
-module Color
-  COLORS = { :clear => 0, :red => 41, :green => 42, :yellow => 43 }
-  def self.method_missing(color_name, *args)
-    color(color_name) + args.first + color(:clear) 
-  end
-  def self.color(color)
-    "\e[#{COLORS[color.to_sym]}m"
+module RedGreen
+  module Color
+    COLORS = { :clear => 0, :red => 41, :green => 42, :yellow => 43 }
+    def self.method_missing(color_name, *args)
+      color(color_name) + args.first + color(:clear) 
+    end
+    def self.color(color)
+      "\e[#{COLORS[color.to_sym]}m"
+    end
   end
 end
 
@@ -20,9 +22,9 @@ class Test::Unit::UI::Console::RedGreenTestRunner < Test::Unit::UI::Console::Tes
   def output_single(something, level=NORMAL)
     return unless (output?(level))
     something = case something
-                when '.' then Color.green('.')
-                when 'F' then Color.red("F")
-                when 'E' then Color.yellow("E")
+                when '.' then RedGreen::Color.green('.')
+                when 'F' then RedGreen::Color.red("F")
+                when 'E' then RedGreen::Color.yellow("E")
                 else something
                 end
     @io.write(something) 
@@ -44,7 +46,7 @@ class Test::Unit::TestResult
   alias :old_to_s :to_s
   def to_s
     if old_to_s =~ /\d+ tests, \d+ assertions, (\d+) failures, (\d+) errors/
-      Color.send($1.to_i != 0 || $2.to_i != 0 ? :red : :green, $&)
+      RedGreen::Color.send($1.to_i != 0 || $2.to_i != 0 ? :red : :green, $&)
     end
   end
 end
@@ -52,13 +54,13 @@ end
 class Test::Unit::Failure
   alias :old_long_display :long_display
   def long_display
-    old_long_display.sub('Failure', Color.red('Failure'))
+    old_long_display.sub('Failure', RedGreen::Color.red('Failure'))
   end
 end
 
 class Test::Unit::Error
   alias :old_long_display :long_display
   def long_display
-    old_long_display.sub('Error', Color.yellow('Error'))
+    old_long_display.sub('Error', RedGreen::Color.yellow('Error'))
   end
 end
