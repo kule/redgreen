@@ -8,11 +8,14 @@ This version works using ZenTest 4.0.0 on XP & Vista.
 
 ## Recent Changes
 
-1.1.2
+0.1.2
 
 * Added foreground coloring (note: changes to Snarl Issue Regular Expression below) - Thanks Matte Edens
 * Added namespace to Color class, to stop conflicts with similar named classes - Thanks Andreas Riemer
 * I'm now working on a Mac so if someone would like to pick this up please let me know!
+
+0.1.1
+* Initial Version
 
 ## Install the gem
 
