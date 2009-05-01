@@ -15,6 +15,7 @@ This version works using ZenTest 4.0.0 on XP & Vista.
 * I'm now working on a Mac so if someone would like to pick this up please let me know!
 
 0.1.1
+
 * Initial Version
 
 ## Install the gem
