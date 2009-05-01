@@ -6,6 +6,13 @@ I had problems with autotest only running once and then stopping (rather than co
 
 This version works using ZenTest 4.0.0 on XP & Vista.
 
+## Recent Changes
+
+1.1.2
+* Added foreground coloring (note: changes to Snarl Issue Regular Expression below) - Thanks Matte Edens
+* Added namespace to Color class, to stop conflicts with similar named classes - Thanks Andreas Riemer
+* I'm now working on a Mac so if someone would like to pick this up please let me know!
+
 ## Install the gem
 
     gem install kule-redgreen -s http://gems.github.com
@@ -34,7 +41,7 @@ Change this line:
     self.failed_results_re = /^\s+\d+\) (?:Failure|Error):\n(.*?)\((.*?)\)/
 
 To:
-    self.failed_results_re = /^\s+\d+\) (?:\e\[\d+m)?(?:Failure|Error)(?:\e\[0m)?:\n(.*?)\((.*?)\)/
+	self.failed_results_re = /^\s+\d+\) (?:\e\[\d+;\d+m)?(?:Failure|Error)(?:\e\[\d+;\d+m)?:\n(.*?)\((.*?)\)/
 
 This then allows the regular expression to ignore the colour escape codes and it picks up the correct amount of failures.
 

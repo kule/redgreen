@@ -4,12 +4,16 @@ require 'test/unit/ui/console/testrunner'
 # cute.
 module RedGreen
   module Color
-    COLORS = { :clear => 0, :red => 41, :green => 42, :yellow => 43 }
+    # 37 = white, 30 = black
+    FG_COLORS = { :for_clear => 37, :for_red => 37, :for_green => 37, :for_yellow => 30}   
+    BG_COLORS = { :clear => 0, :red => 41, :green => 42, :yellow => 43 }
     def self.method_missing(color_name, *args)
       color(color_name) + args.first + color(:clear) 
     end
     def self.color(color)
-      "\e[#{COLORS[color.to_sym]}m"
+      fg_color = FG_COLORS["for_#{color}".to_sym]
+      bg_color = BG_COLORS[color.to_sym]
+      "\e[#{fg_color};#{bg_color}m" 
     end
   end
 end
